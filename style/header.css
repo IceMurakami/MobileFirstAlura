@@ -1,0 +1,153 @@
+.cabecalho_menu_hamburguer{
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+/*Combinador css*/
+.container__botao:checked~.container_rotulo>.cabecalho_menu_hamburguer{
+    background-image: url("../assets/Menu\ Aberto.png");
+}
+/*Combinador css*/
+.container__botao:checked~.container_rotulo{
+    background:var(--degrade-link);
+}
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.container__imagem{
+    padding:1em;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top:100%;
+     width: 60vw;
+}
+
+
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.container__botao:checked~.lista-menu{
+    display: block;  
+}
+
+.container__botao{
+    display: none;
+}
+.lista-menu__titulo{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--laranja)
+}
+.lista-menu__link{
+    background: var(--degrade-link);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+    text-transform: uppercase;
+
+}
+
+.container_titulo,.lista-header,
+.opcoes{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+   .container_titulo,
+   .container_titulo--negrito{
+        font-family: var(--fonte-secundaria);
+        font-size:1.9rem;
+   }
+
+   .container_titulo,
+   .opcoes{
+        font-weight: 400;
+        display: block;    
+   }
+
+   .container_titulo--negrito{
+        font-weight: 700;
+   }
+
+   .opcoes{
+        padding:2rem;
+        display: flex;
+   }
+   .opçoes_item{
+        padding :0 1em;
+        text-transform: uppercase;
+   }
+   .container__imagem_transparent,
+   .cabecalho_menu_hamburguer,
+   .opcoes_menu{
+        display: none;
+   }
+
+   .opcoes_menu:checked~.lista-menu{
+        display: block;
+        width: auto;
+   }
+   .lista-header{
+        display:none;
+   }
+   .opcoes_menu:checked~.opcoes_rotulo > .opçoes_item{
+        background: var(--degrade-link);
+        color: var(--branco);
+        
+   }
+   .opçoes_item{
+    padding: 2em 1em;
+   }
+   .lista-menu__item:hover{
+        background: var(--degrade-link);
+   }
+   .lista-menu__item:hover>.lista-menu__link{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;   
+    }
+}
+
+@media screen and (min-width:1728px){
+    .cabecalho{
+        display: flex;
+        justify-content: space-between ;
+    }
+    
+    
+    .lista-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0em 5em 0em 5em;
+     }
+     .lista-header-link{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+        font-weight: 400;
+     }
+     .container{
+        display:none;
+     }
+}

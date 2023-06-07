@@ -1,0 +1,64 @@
+.banner{
+   
+    background: var(--degrade-link);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+.titulo_banner{
+    font-size: 1.1em;
+    font-weight:700;
+}
+.banner_texto{
+    font-weight: 400;
+    padding:1em;
+    
+}
+.banner_pesquisa{
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius:24px;
+    width:100%;
+    padding: 1em;
+}
+.banner_pesquisa::placeholder{
+    font-size:14px;
+    font-weight: 400;
+    color: var(--branco);
+    text-align: center;
+    background: url("../assets/VectorLupa.svg");
+    background-repeat: no-repeat;
+    background-position: 1em 0;
+
+
+}
+@media screen and (min-width: 1024px){
+ .titulo_banner{
+    font-size:2rem;
+ }
+
+ .banner_pesquisa{
+    width:50%;
+    
+ }
+ .banner_pesquisa::placeholder{
+    background-position: 3em 0;
+ }
+}
+
+@media screen and (min-width:1728px){
+    .titulo_banner{
+        font-size:2.30rem;
+     }
+   
+    .banner_pesquisa::placeholder{
+        background-position: 5em; 
+    }
+
+    .carrosel_card{
+        display:flex;
+        justify-content: space-around;
+    }
+
+}
